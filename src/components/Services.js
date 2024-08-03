@@ -96,8 +96,8 @@ const Services = () => {
         <div className="card-services">
           <img src={img} className="card-img-top" alt="Card title" />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 className="card-title">Content Creation</h5>
+            <p className="card-text">Craft engaging social media content to boost creativity, grow your audience, and enhance online presence effectively.</p>
             <a href="/" className="btn btn-primary sc-btn" onClick={scrollToContact}>Know More</a>
           </div>
         </div>

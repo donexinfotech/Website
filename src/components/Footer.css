@@ -20,8 +20,11 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
-    padding: 70px 0;
+	background-color: #000000;
+    padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .footer-col{
    width: 25%;
@@ -95,3 +98,5 @@ ul{
     width: 100%;
 }
 }
+
+
