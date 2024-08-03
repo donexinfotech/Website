@@ -9,6 +9,9 @@
     justify-content: center;
 }
 
+.works .heading{
+    margin-bottom: 40px;
+}
 .caro-btn{
     animation: none;
 }

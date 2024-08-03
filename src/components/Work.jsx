@@ -6,7 +6,7 @@ import './work.css'
 
 export default function Work() {
   return (
-    <div>
+    <div id='works' className='works'>
         <div className="heading">
             <h2 className='fw-bold'>Our Works</h2>
         </div>

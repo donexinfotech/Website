@@ -19,7 +19,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const handleScroll = () => {
-    const sections = ['home', 'about', 'services', 'contact'];
+    const sections = ['home', 'about', 'services','works', 'contact'];
     const scrollPosition = window.scrollY + 75;
 
     for (const section of sections) {
@@ -63,6 +63,9 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className={`nav-link ${activeSection === 'services' ? 'active' : ''}`} href="#" onClick={(e) => scrollToSection('services', e, setActiveSection)}>Services</a>
+              </li>
+              <li className="nav-item">
+                <a className={`nav-link ${activeSection === 'works' ? 'active' : ''}`} href="#" onClick={(e) => scrollToSection('works', e, setActiveSection)}>Our Works</a>
               </li>
               <li className="nav-item">
                 <a className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} href="#" onClick={(e) => scrollToSection('contact', e, setActiveSection)}>Contact Us</a>
