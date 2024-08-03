@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logo from './Logo/final_logo.png';
 
 const scrollToSection = (id, event, setActiveSection) => {
   event.preventDefault();
@@ -48,8 +49,8 @@ const Navbar = () => {
     <>
       <nav className="d-flex navbar navbar-expand-lg fixed-top bg-body-tertiary card shadow-lg navbar-custom">
         <div className="container-fluid">
-          <a className="navbar-brand ml" href="/#" onClick={(e) => scrollToSection('home', e, setActiveSection)}>Logo</a>
-          <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={!collapse} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+          <a className="navbar-brand ml" href="/#" onClick={(e) => scrollToSection('home', e, setActiveSection)}><img src={logo} alt="Logo" style={{'height':'41px'}}/></a>
+          <button className="navbar-toggler ms-auto tog" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={!collapse} aria-label="Toggle navigation" onClick={handleNavCollapse} >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse nav-flex mr" id="navbarSupportedContent">
