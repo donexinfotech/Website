@@ -1,0 +1,18 @@
+.caro-img{
+    height: 450px;
+    width: 70%;
+    filter: brightness(0.5);
+}
+
+.caro{
+    display: flex;
+    justify-content: center;
+}
+
+.caro-btn{
+    animation: none;
+}
+
+.caro-text{
+    filter: brightness(200);
+}
