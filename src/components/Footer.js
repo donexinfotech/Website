@@ -4,7 +4,9 @@ import './Footer.css'
 export default function Footer() {
   return (
     <>
+	<hr />
     <footer class="footer">
+			
   	 		<div class="footer-col">
   	 			<h4 class='sl-h4'>follow us</h4>
   	 			<div class="social-links">
