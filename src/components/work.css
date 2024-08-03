@@ -16,3 +16,9 @@
 .caro-text{
     filter: brightness(200);
 }
+
+@media (max-width:900px) {
+    .caro-img{
+        width: 100%;
+    }
+}
