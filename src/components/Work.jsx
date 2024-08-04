@@ -1,5 +1,5 @@
 import React from 'react'
-import portfolio from './works/Screenshot 2024-08-03 214003.png'
+import portfolio from './works/Screenshot 2024-08-04 120921.png'
 import report from './works/reportcard.png'
 import rbook from './works/rbook.png'
 import './work.css'
