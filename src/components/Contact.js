@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [result, setResult] = useState("");
@@ -35,7 +36,11 @@ export default function Contact() {
       <form onSubmit={onSubmit}>
         <div className='container'>
           <div className="row">
-            <div className="col">
+            <motion.div className="col"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            >
               <input
                 type="text"
                 className="form-control"
@@ -44,8 +49,12 @@ export default function Contact() {
                 name="firstName"
                 required
               />
-            </div>
-            <div className="col">
+            </motion.div>
+            <motion.div className="col"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1 }}
+            >
               <input
                 type="text"
                 className="form-control"
@@ -54,9 +63,13 @@ export default function Contact() {
                 name="lastName"
                 required
               />
-            </div>
+            </motion.div>
           </div>
-          <div className="mb-3 mt-3">
+          <motion.div className="mb-3 mt-3"
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          >
             <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
             <input
               type="email"
@@ -94,9 +107,17 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-          </div>
-          <button type="submit" className="btn btn-primary button-contact">Submit</button>
-          <button type="button" className="btn btn-primary Wbutton"><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+          </motion.div>
+          <motion.button type="submit" className="btn btn-primary button-contact"
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          >Submit</motion.button>
+          <motion.button type="button" className="btn btn-primary Wbutton"
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1.5 }}
+          ><i className="fa-brands fa-whatsapp"></i> WhatsApp</motion.button>
         </div>
       </form>
       <span className='form-submit'>{result}</span>

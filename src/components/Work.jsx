@@ -5,14 +5,36 @@ import rbook from './works/rbook.png'
 import './work.css'
 import shyamsPortfolio from './works/portfolio.png'
 import a1 from "./works/a1.png";
+import { motion } from 'framer-motion'
+
+const iconVariants = (duration) => ({
+    initial: { y: -10 },
+    animate: {
+      y: [10, -10],
+      transition: {
+        duration: duration,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: "reverse",
+      },
+    },
+  });
 
 export default function Work() {
   return (
     <div id='works' className='works'>
-        <div className="heading">
+        <motion.div className="heading"
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        >
             <h2 className='fw-bold'>Our Works</h2>
-        </div>
-      <div id="carouselExampleCaptions" class="carousel slide">
+        </motion.div>
+      <motion.div id="carouselExampleCaptions" class="carousel slide"
+      variants={iconVariants(2.4)}
+      initial="initial"
+      animate="animate"
+      >
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,7 +79,7 @@ export default function Work() {
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        </div>
+        </motion.div>
     </div>
   )
 }
